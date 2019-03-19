@@ -40,7 +40,14 @@ public class Merge{
       }
     }
     while(c < ary.length){
-      
+      ary3[c3] = ary[c];
+      c++;
+      c3++;
+    }
+    while(c2 < ary2.length){
+      ary[c3] = ary2[c2];
+      c2++;
+      c3++;
     }
   }
 
