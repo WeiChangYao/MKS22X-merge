@@ -9,9 +9,9 @@ public class Merge{
     int mi = lo+(hi-lo)/2;
     mergesort(data,lo,mi);//left
     mergesort(data,mi+1,hi);//right
-    //merge(data,lo,mid,hi);
+    merge(data,lo,mi,hi);
   }
-  private static void merges(int[] data, int low, int mid, int hig){
+  private static void merge(int[] data, int low, int mid, int hig){
     int one = mid-low+1;
     int two = hig - mid;
     int[] ary = new int[one];
