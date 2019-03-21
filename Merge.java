@@ -24,29 +24,29 @@ public class Merge{
     }
     for(int i = 0; i < two; i++){
       ary2[i]=data[mid+1+i];
-    }
-    int[] ary3 = new int[hig+1];
+    }/*
+    int[] ary3 = new int[hig+1];*/
     int c = 0;
     int c2 = 0;
     int c3 = low;
-    while(c < ary.length && c2 < ary2.length){
+    while(c < one && c2 < two){
       if (ary[c] < ary2[c2]){
-        ary3[c3] = ary[c];
+        data[c3] = ary[c];
         c++;
       }
       else{
-        ary[c3] = ary2[c2];
+        data[c3] = ary2[c2];
         c2++;
       }
       c3++;
     }
-    while(c < ary.length){
-      ary3[c3] = ary[c];
+    while(c < one){
+      data[c3] = ary[c];
       c++;
       c3++;
     }
-    while(c2 < ary2.length){
-      ary[c3] = ary2[c2];
+    while(c2 < two){
+      data[c3] = ary2[c2];
       c2++;
       c3++;
     }
