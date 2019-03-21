@@ -7,7 +7,7 @@ public class Merge{
     if (hi <= lo){
       return;
     }
-    int mi = lo+(hi-lo)/2;
+    int mi = (hi+lo)/2;
     mergesort(data,lo,mi);//left
     mergesort(data,mi+1,hi);//right
     merge(data,lo,mi,hi);
@@ -18,10 +18,10 @@ public class Merge{
     int[] ary = new int[one];
     int[] ary2 = new int[two];
     for(int i = 0; i < mid; i++){
-      ary[i]=data[i];
+      ary[i]=data[low+i];
     }
     for(int i = 0; mid+1 < hig; i++){
-      ary2[i]=data[i];
+      ary2[i]=data[mid+1+i];
       mid++;
     }
     int[] ary3 = new int[hig+1];
@@ -113,10 +113,7 @@ public class Merge{
     Arrays.sort(result);
     
     long startTime = System.currentTimeMillis();
-    /*
-     * Test your sort here //yoursort(start);
-     * Add code to switch which sort is tested by changing one of the args!
-     */
+    mergesort(start);
     long elapsedTime = System.currentTimeMillis() - startTime;
     if(Arrays.equals(start,result)){
       System.out.println("PASS Case "+name(type)+"\t array, size:"+start.length+"\t"+elapsedTime/1000.0+"sec ");
