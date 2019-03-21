@@ -3,6 +3,25 @@ public class Merge{
   public static void mergesort(int[]data){
     mergesort(data,0,data.length-1);
   }
+
+  public static void insertionSort(int[] ary,int lo, int hi){
+   for (int i = lo; i < hi; i++){
+     int swap = ary[i];                   //saves that integer
+     for (int j = i; !(j == -1); j--){
+       if (j == 0) {                      //once it hits the end, it puts it in
+         ary[j] = swap;
+       } else{
+       if (swap < ary[j-1]){              //check number before
+         ary[j] = ary[j-1];               //put the thing before over there (j)
+       }
+       else{                              //check number before
+         ary[j] = swap;                   //put the saved number there
+         j = 0;                           //this way, j turns into 0 when this ends and ends the for loop
+       } }
+     }
+   }
+ }
+
   private static void mergesort(int[]data, int lo, int hi){
     if (lo >= hi){
       return;
@@ -51,5 +70,5 @@ public class Merge{
       c2++;
       c3++;
     }
-  } 
+  }
 }
