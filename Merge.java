@@ -3,6 +3,9 @@ public class Merge{
   public static void mergesort(int[]data){
     mergesort(data,0,data.length-1);
   }
+  public static void iSort(int[]data){
+    insertionSort(data, 0, data.length-1);
+  }
 
   public static void insertionSort(int[] ary,int lo, int hi){
    for (int i = lo; i < hi; i++){
